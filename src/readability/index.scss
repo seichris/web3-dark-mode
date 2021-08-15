@@ -1,0 +1,42 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Modified version of https://hg.mozilla.org/mozilla-central/file/tip/toolkit/themes/shared/aboutReader.css */
+
+.stylebot-reader {
+  --body-padding: 64px;
+
+  @import './scss/content.scss';
+
+  --main-background: #fff;
+  --main-foreground: #333;
+
+  &.sepia {
+    --main-background: #f4ecd8;
+    --main-foreground: #5b4636;
+  }
+
+  &.dark {
+    --main-background: #222;
+    --main-foreground: #bababa;
+  }
+}
+
+.stylebot-reader {
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  color: var(--main-foreground);
+  background-color: var(--main-background);
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.stylebot-reader-body {
+  margin: 0 auto;
+  padding: var(--body-padding);
+}
